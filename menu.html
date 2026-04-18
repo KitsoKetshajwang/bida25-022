@@ -1,0 +1,244 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daily Grind Cafe — Menu</title>
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">
+      <img src="./images/logo.png" alt="Daily Grind Cafe logo">
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="order.html">ORDER</a></li>
+        <li><a href="testimonials.html">TESTIMONIALS</a></li>
+        <li><a href="feedback.html">FEEDBACK</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <nav class="nav-tabs" role="tablist">
+    <span class="nav-tab active" onclick="showTab('coffee', this)">Coffee</span>
+    <span class="nav-tab" onclick="showTab('drinks', this)">Drinks</span>
+    <span class="nav-tab" onclick="showTab('food', this)">Food</span>
+    <span class="nav-tab" onclick="showTab('sweets', this)">Sweets</span>
+  </nav>
+
+  <main class="container">
+
+    <section id="coffee" class="menu-section active" role="tabpanel">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Coffee</h2>
+          <p>Single origin beans, roasted in-house every Tuesday</p>
+        </div>
+      </div>
+
+      <div class="specials-banner">
+        <div class="specials-icon">✨</div>
+        <div class="specials-text">
+          <h3>This Month's Featured Roast</h3>
+          <p>Ethiopian Yirgacheffe — bright berry notes with a honey finish. Available as pour-over or cold brew.</p>
+        </div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <span class="card-badge badge-popular">Popular</span>
+          <img class="card-img" src="./images/espresso.png" alt="Espresso">
+          <div class="card-body">
+            <p class="card-name">Espresso</p>
+            <p class="card-desc">A rich double shot pulled from our rotating single-origin blend. Bold, smooth, no bitterness.</p>
+            <div class="card-footer"><span class="card-price">P35</span><span class="card-tag">Dairy-free</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="card-img" src="./images/service2.png" alt="Flat White">
+          <div class="card-body">
+            <p class="card-name">Flat White</p>
+            <p class="card-desc">Velvety micro-foamed milk over a double ristretto. Our most ordered drink.</p>
+            <div class="card-footer"><span class="card-price">P55</span><span class="card-tag">Oat option</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <span class="card-badge badge-new">New</span>
+          <img class="card-img" src="./images/honeyoat.png" alt="Honey Oat Latte">
+          <div class="card-body">
+            <p class="card-name">Honey Oat Latte</p>
+            <p class="card-desc">Espresso, oat milk, and a drizzle of local wildflower honey. Naturally sweet and comforting.</p>
+            <div class="card-footer"><span class="card-price">P70</span><span class="card-tag">Oat milk</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <span class="card-badge badge-popular">Popular</span>
+          <img class="card-img" src="./images/service4.png" alt="Cold Brew">
+          <div class="card-body">
+            <p class="card-name">Cold Brew</p>
+            <p class="card-desc">Steeped 18 hours for a smooth, low-acid concentrate. Served over ice with or without milk.</p>
+            <div class="card-footer"><span class="card-price">P65</span><span class="card-tag">Vegan</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="drinks" class="menu-section" role="tabpanel">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Other Drinks</h2>
+          <p>Teas, tonics, and chilled favourites</p>
+        </div>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <span class="card-badge badge-popular">Popular</span>
+          <img class="card-img" src="./images/matchalate.png" alt="Matcha Latte">
+          <div class="card-body">
+            <p class="card-name">Matcha Latte</p>
+            <p class="card-desc">Ceremonial grade matcha whisked with oat milk and a touch of honey. Earthy and smooth.</p>
+            <div class="card-footer"><span class="card-price">P70</span><span class="card-tag">Vegan</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="card-img" src="./images/masalachai.png" alt="Masala Chai">
+          <div class="card-body">
+            <p class="card-name">Masala Chai</p>
+            <p class="card-desc">House-brewed black tea with ginger, cardamom, cinnamon, and steamed milk.</p>
+            <div class="card-footer"><span class="card-price">P60</span><span class="card-tag">Dairy / Oat</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <span class="card-badge badge-vegan">Vegan</span>
+          <img class="card-img" src="./images/hibiscustea.png" alt="Hibiscus Iced Tea">
+          <div class="card-body">
+            <p class="card-name">Hibiscus Iced Tea</p>
+            <p class="card-desc">Chilled hibiscus flower tea with a squeeze of lime. Tart, refreshing, caffeine-free.</p>
+            <div class="card-footer"><span class="card-price">P50</span><span class="card-tag">Cold</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="card-img" src="./images/lemonadedrink.png" alt="Fresh Lemonade">
+          <div class="card-body">
+            <p class="card-name">Fresh Lemonade</p>
+            <p class="card-desc">Squeezed to order with cane sugar syrup and mint. Still or sparkling water base.</p>
+            <div class="card-footer"><span class="card-price">P50</span><span class="card-tag">Vegan</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="food" class="menu-section" role="tabpanel">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Food</h2>
+          <p>Freshly prepared from 7am — served until sold out</p>
+        </div>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <span class="card-badge badge-popular">Popular</span>
+          <img class="card-img" src="./images/avocadotoast.png" alt="Avocado Toast">
+          <div class="card-body">
+            <p class="card-name">Avocado Toast</p>
+            <p class="card-desc">Smashed avo on sourdough with chilli flakes, lemon zest, and dukkah. Add a poached egg for P20.</p>
+            <div class="card-footer"><span class="card-price">P90</span><span class="card-tag">Vegan option</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="card-img" src="./images/granolabowl.png" alt="Granola Bowl">
+          <div class="card-body">
+            <p class="card-name">Granola Bowl</p>
+            <p class="card-desc">House-toasted oat granola with coconut yoghurt, seasonal fruit, and honey.</p>
+            <div class="card-footer"><span class="card-price">P80</span><span class="card-tag">Vegan</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="card-img" src="./images/eggandcheese.png" alt="Egg & Cheese Croissant">
+          <div class="card-body">
+            <p class="card-name">Egg & Cheese Croissant</p>
+            <p class="card-desc">Buttery croissant, scrambled free-range eggs, gruyère, and wholegrain mustard.</p>
+            <div class="card-footer"><span class="card-price">P95</span><span class="card-tag">Vegetarian</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <span class="card-badge badge-popular">Popular</span>
+          <img class="card-img" src="./images/chickenpestopanini.png" alt="Chicken Pesto Panini">
+          <div class="card-body">
+            <p class="card-name">Chicken Pesto Panini</p>
+            <p class="card-desc">Grilled chicken, basil pesto, sun-dried tomatoes, and mozzarella on ciabatta.</p>
+            <div class="card-footer"><span class="card-price">P105</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sweets" class="menu-section" role="tabpanel">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Sweets & Baked Goods</h2>
+          <p>Baked fresh in our kitchen each morning</p>
+        </div>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <span class="card-badge badge-popular">Popular</span>
+          <img class="card-img" src="./images/almondcro.png" alt="Almond Croissant">
+          <div class="card-body">
+            <p class="card-name">Almond Croissant</p>
+            <p class="card-desc">Twice-baked with frangipane cream and toasted flaked almonds. Deeply buttery.</p>
+            <div class="card-footer"><span class="card-price">P55</span><span class="card-tag">Vegetarian</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img class="card-img" src="./images/bananabread.png" alt="Banana Bread">
+          <div class="card-body">
+            <p class="card-name">Banana Bread</p>
+            <p class="card-desc">Moist, dense loaf with dark chocolate chips. Served warm with salted butter.</p>
+            <div class="card-footer"><span class="card-price">P45</span><span class="card-tag">Vegetarian</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <span class="card-badge badge-new">New</span>
+          <img class="card-img" src="./images/tahini.png" alt="Tahini Date Blondie">
+          <div class="card-body">
+            <p class="card-name">Tahini Date Blondie</p>
+            <p class="card-desc">Fudgy blondie with tahini swirl, Medjool dates, and a pinch of sea salt.</p>
+            <div class="card-footer"><span class="card-price">P50</span><span class="card-tag">Vegan</span></div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <span class="card-badge badge-popular">Popular</span>
+          <img class="card-img" src="./images/chocolatecake.png" alt="Chocolate Fondant Cake">
+          <div class="card-body">
+            <p class="card-name">Chocolate Fondant Cake</p>
+            <p class="card-desc">Rich dark chocolate cake slice with a molten centre. Served with crème fraîche.</p>
+            <div class="card-footer"><span class="card-price">P70</span><span class="card-tag">Vegetarian</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>2026 Daily Grind Cafe. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showTab(id, btn) {
+      document.querySelectorAll('.menu-section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>

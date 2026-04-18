@@ -1,0 +1,402 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Online – Daily Grind Cafe</title>
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="./images/logo.png" alt="Daily Grind Cafe logo">
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="order.html">ORDER</a></li>
+        <li><a href="testimonials.html">TESTIMONIALS</a></li>
+        <li><a href="feedback.html">FEEDBACK</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="page-banner">
+    <p>Daily Grind Cafe</p>
+    <h1>Order <span>Online</span></h1>
+  </div>
+
+  <nav class="order-nav-tabs">
+    <span class="order-nav-tab active" onclick="filterCategory('coffee', this)">Coffee</span>
+    <span class="order-nav-tab" onclick="filterCategory('drinks', this)">Drinks</span>
+    <span class="order-nav-tab" onclick="filterCategory('food', this)">Food</span>
+    <span class="order-nav-tab" onclick="filterCategory('sweets', this)">Sweets</span>
+  </nav>
+
+  <div class="order-page">
+
+    <div class="order-left">
+      <p class="section-label">Step 1</p>
+      <h2 class="section-title">Choose Your Items</h2>
+
+      <div class="menu-category active" data-cat="coffee">
+        <p class="category-name">Coffee</p>
+        <div class="item-grid">
+          <div class="menu-item" onclick="toggleItem(this, 'Espresso', 35)">
+            <p class="item-name">Espresso</p>
+            <p class="item-desc">A rich double shot, bold, smooth, no bitterness</p>
+            <p class="item-price">P35</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+          <div class="menu-item" onclick="toggleItem(this, 'Flat White', 55)">
+            <p class="item-name">Flat White</p>
+            <p class="item-desc">Velvety micro-foamed milk over a double ristretto</p>
+            <p class="item-price">P55</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+          <div class="menu-item" onclick="toggleItem(this, 'Honey Oat Latte', 70)">
+            <p class="item-name">Honey Oat Latte</p>
+            <p class="item-desc">Espresso, oat milk and local wildflower honey</p>
+            <p class="item-price">P70</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+          <div class="menu-item" onclick="toggleItem(this, 'Cold Brew', 65)">
+            <p class="item-name">Cold Brew</p>
+            <p class="item-desc">Steeped 18 hours, smooth and low-acid over ice</p>
+            <p class="item-price">P65</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category" data-cat="drinks">
+        <p class="category-name">Drinks</p>
+        <div class="item-grid">
+          <div class="menu-item" onclick="toggleItem(this, 'Matcha Latte', 70)">
+            <p class="item-name">Matcha Latte</p>
+            <p class="item-desc">Ceremonial matcha whisked with oat milk and honey</p>
+            <p class="item-price">P70</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+          <div class="menu-item" onclick="toggleItem(this, 'Masala Chai', 60)">
+            <p class="item-name">Masala Chai</p>
+            <p class="item-desc">House-brewed black tea with ginger and cardamom</p>
+            <p class="item-price">P60</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+          <div class="menu-item" onclick="toggleItem(this, 'Hibiscus Iced Tea', 50)">
+            <p class="item-name">Hibiscus Iced Tea</p>
+            <p class="item-desc">Chilled hibiscus with lime, tart and caffeine-free</p>
+            <p class="item-price">P50</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+          <div class="menu-item" onclick="toggleItem(this, 'Fresh Lemonade', 50)">
+            <p class="item-name">Fresh Lemonade</p>
+            <p class="item-desc">Squeezed to order with cane sugar syrup and mint</p>
+            <p class="item-price">P50</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category" data-cat="food">
+        <p class="category-name">Food</p>
+        <div class="item-grid">
+          <div class="menu-item" onclick="toggleItem(this, 'Avocado Toast', 90)">
+            <p class="item-name">Avocado Toast</p>
+            <p class="item-desc">Smashed avo on sourdough with chilli and dukkah</p>
+            <p class="item-price">P90</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+          <div class="menu-item" onclick="toggleItem(this, 'Granola Bowl', 80)">
+            <p class="item-name">Granola Bowl</p>
+            <p class="item-desc">House-toasted granola with coconut yoghurt and fruit</p>
+            <p class="item-price">P80</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+          <div class="menu-item" onclick="toggleItem(this, 'Egg & Cheese Croissant', 95)">
+            <p class="item-name">Egg & Cheese Croissant</p>
+            <p class="item-desc">Buttery croissant with scrambled eggs and gruyère</p>
+            <p class="item-price">P95</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+          <div class="menu-item" onclick="toggleItem(this, 'Chicken Pesto Panini', 105)">
+            <p class="item-name">Chicken Pesto Panini</p>
+            <p class="item-desc">Grilled chicken, basil pesto and mozzarella on ciabatta</p>
+            <p class="item-price">P105</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category" data-cat="sweets">
+        <p class="category-name">Sweets</p>
+        <div class="item-grid">
+          <div class="menu-item" onclick="toggleItem(this, 'Almond Croissant', 55)">
+            <p class="item-name">Almond Croissant</p>
+            <p class="item-desc">Twice-baked with frangipane cream and flaked almonds</p>
+            <p class="item-price">P55</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+          <div class="menu-item" onclick="toggleItem(this, 'Banana Bread', 45)">
+            <p class="item-name">Banana Bread</p>
+            <p class="item-desc">Moist loaf with dark chocolate chips and salted butter</p>
+            <p class="item-price">P45</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+          <div class="menu-item" onclick="toggleItem(this, 'Tahini Date Blondie', 50)">
+            <p class="item-name">Tahini Date Blondie</p>
+            <p class="item-desc">Fudgy blondie with tahini swirl and Medjool dates</p>
+            <p class="item-price">P50</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+          <div class="menu-item" onclick="toggleItem(this, 'Chocolate Fondant Cake', 70)">
+            <p class="item-name">Chocolate Fondant Cake</p>
+            <p class="item-desc">Rich dark chocolate slice with a molten centre</p>
+            <p class="item-price">P70</p>
+            <div class="item-qty">
+              <button class="qty-btn" onclick="changeQty(event, this, -1)">−</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn" onclick="changeQty(event, this, 1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="order-sidebar">
+      <p class="section-label">Step 2</p>
+      <h2 class="section-title">Your Order</h2>
+
+      <div class="summary-card">
+        <div class="summary-header">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <h3>Order Summary</h3>
+        </div>
+        <div class="summary-body">
+
+          <div class="empty-state" id="emptyState">
+            <i class="fa-solid fa-mug-hot"></i>
+            <p>No items selected yet.<br>Pick something from the menu!</p>
+          </div>
+
+          <div class="summary-items" id="summaryItems" style="display:none;"></div>
+          <hr class="summary-divider" id="summaryDivider" style="display:none;">
+          <div class="summary-total" id="summaryTotal" style="display:none;">
+            <span>Total</span>
+            <span id="totalAmount">P0</span>
+          </div>
+
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="customerName" placeholder="e.g. Keabetswe Moyo">
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="customerEmail" placeholder="e.g. kea@email.com">
+          </div>
+          <div class="form-group">
+            <label>Pickup Time</label>
+            <select id="pickupTime">
+              <option value="">-- Select a time --</option>
+              <option>As soon as possible</option>
+              <option>In 15 minutes</option>
+              <option>In 30 minutes</option>
+              <option>In 1 hour</option>
+              <option>Delivery</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Special Instructions</label>
+            <textarea id="specialNotes" placeholder="Allergies, preferences, extra shots..."></textarea>
+          </div>
+
+          <button class="place-order-btn" onclick="placeOrder()">
+            Place Order <i class="fa-solid fa-mug-hot"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-box">
+      <i class="fa-solid fa-circle-check"></i>
+      <h2>Order Placed!</h2>
+      <p id="successMsg">Thank you! Your order is being prepared.</p>
+      <button class="success-close" onclick="closeSuccess()">Back to Menu</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>2026 Daily Grind Cafe. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const cart = {};
+
+    function filterCategory(cat, btn) {
+      document.querySelectorAll('.order-nav-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.menu-category').forEach(sec => {
+        sec.classList.toggle('active', sec.dataset.cat === cat);
+      });
+    }
+
+    function toggleItem(el, name, price) {
+      if (el.classList.contains('selected')) {
+        el.classList.remove('selected');
+        delete cart[name];
+      } else {
+        el.classList.add('selected');
+        cart[name] = { price, qty: 1 };
+        el.querySelector('.qty-num').textContent = '1';
+      }
+      updateSummary();
+    }
+
+    function changeQty(e, btn, delta) {
+      e.stopPropagation();
+      const item = btn.closest('.menu-item');
+      const name = item.querySelector('.item-name').textContent;
+      const qtyEl = item.querySelector('.qty-num');
+      let qty = parseInt(qtyEl.textContent) + delta;
+      if (qty < 1) qty = 1;
+      qtyEl.textContent = qty;
+      if (cart[name]) cart[name].qty = qty;
+      updateSummary();
+    }
+
+    function updateSummary() {
+      const keys = Object.keys(cart);
+      const emptyState = document.getElementById('emptyState');
+      const summaryItems = document.getElementById('summaryItems');
+      const summaryDivider = document.getElementById('summaryDivider');
+      const summaryTotal = document.getElementById('summaryTotal');
+
+      if (keys.length === 0) {
+        emptyState.style.display = 'block';
+        summaryItems.style.display = 'none';
+        summaryDivider.style.display = 'none';
+        summaryTotal.style.display = 'none';
+        return;
+      }
+
+      emptyState.style.display = 'none';
+      summaryItems.style.display = 'block';
+      summaryDivider.style.display = 'block';
+      summaryTotal.style.display = 'flex';
+
+      let total = 0;
+      summaryItems.innerHTML = keys.map(name => {
+        const { price, qty } = cart[name];
+        total += price * qty;
+        return `<div class="summary-item">
+          <div>
+            <div class="summary-item-name">${name}</div>
+            <div class="summary-item-qty">x${qty}</div>
+          </div>
+          <span class="summary-item-price">P${price * qty}</span>
+        </div>`;
+      }).join('');
+
+      document.getElementById('totalAmount').textContent = `P${total}`;
+    }
+
+    function placeOrder() {
+      const name = document.getElementById('customerName').value.trim();
+      const email = document.getElementById('customerEmail').value.trim();
+      const time = document.getElementById('pickupTime').value;
+
+      if (Object.keys(cart).length === 0) {
+        alert('Please select at least one item.');
+        return;
+      }
+      if (!name) { alert('Please enter your name.'); return; }
+      if (!email) { alert('Please enter your email.'); return; }
+      if (!time) { alert('Please select a pickup time.'); return; }
+
+      document.getElementById('successMsg').textContent =
+        `Thank you, ${name}! Your order will be ready ${time === 'As soon as possible' ? 'as soon as possible' : time.toLowerCase()}. A confirmation has been sent to ${email}.`;
+      document.getElementById('successOverlay').classList.add('show');
+    }
+
+    function closeSuccess() {
+      document.getElementById('successOverlay').classList.remove('show');
+      document.querySelectorAll('.menu-item.selected').forEach(el => el.classList.remove('selected'));
+      Object.keys(cart).forEach(k => delete cart[k]);
+      updateSummary();
+      document.getElementById('customerName').value = '';
+      document.getElementById('customerEmail').value = '';
+      document.getElementById('pickupTime').value = '';
+      document.getElementById('specialNotes').value = '';
+    }
+  </script>
+</body>
+</html>

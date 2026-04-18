@@ -1,0 +1,100 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAILY GRIND CAFE</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <header>
+      <div class="logo">
+        <img src="./images/logo.png" alt="Daily Grind Cafe Logo">
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html" class="active">HOME</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+          <li><a href="menu.html">MENU</a></li>
+          <li><a href="order.html">ORDER</a></li>
+          <li><a href="testimonials.html">TESTIMONIALS</a></li>
+          <li><a href="feedback.html">FEEDBACK</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="hero" id="home">
+
+        <div class="slideshow">
+          <div class="slide active" style="background-image: url('./images/eggandcheese.png')"></div>
+          <div class="slide" style="background-image: url('./images/hibiscustea.png')"></div>
+          <div class="slide" style="background-image: url('./images/chocolatecake.png')"></div>
+          <div class="slide" style="background-image: url('./images/lemonadedrink.png')"></div>
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="slide-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
+        </div>
+
+        <div class="hero-content">
+          <p class="hero-tag">Est. 2015  Coffee City</p>
+          <h1 class="hero-title">Welcome to<br><span>Daily Grind</span> Cafe</h1>
+          <p class="hero-sub">Your favourite spot for freshly brewed coffee, cozy vibes,<br>and great food. Start your day the right way.</p>
+          <div class="hero-actions">
+            <a href="menu.html" class="btn-primary">Explore Our Menu</a>
+            <a href="order.html" class="btn-ghost">Order Now</a>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="section-divider-line">
+        <hr>
+      </div>
+
+      <section class="contact-section" id="contact">
+        <h2 class="contact-heading">CONTACT US</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Main Mall, Coffee City</p>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <p>+267 72602008</p>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <p>hello@dailygrindcafe.com</p>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <p>Mon–Fri: 7am–8pm Sat–Sun: 8am–6pm</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>2026 Daily Grind Cafe. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
