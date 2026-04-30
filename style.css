@@ -1,8 +1,5 @@
  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
 
-/* =====================================================
-   CSS VARIABLES
-   ===================================================== */
 :root {
   --cream:      #fdf6ee;
   --parchment:  #f3e8d6;
@@ -18,9 +15,6 @@
   --white:      #ffffff;
 }
 
-/* =====================================================
-   RESET & BASE
-   ===================================================== */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -59,9 +53,6 @@ main {
   flex: 1;
 }
 
-/* =====================================================
-   HEADER & NAV  — desktop default
-   ===================================================== */
 header {
   display: flex;
   justify-content: space-between;
@@ -81,7 +72,6 @@ header .logo img {
   display: block;
 }
 
-/* Normal top-right nav — always visible on desktop */
 header .nav {
   display: flex;
 }
@@ -110,11 +100,8 @@ header .nav ul li a.active {
   color: var(--caramel-md);
 }
 
-/* =====================================================
-   HAMBURGER BUTTON — hidden on desktop
-   ===================================================== */
 .hamburger {
-  display: none;          /* hidden on desktop */
+  display: none;          
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -143,14 +130,10 @@ header .nav ul li a.active {
   transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
-/* Animates to X when drawer is open */
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* =====================================================
-   SLIDE-OUT DRAWER — mobile only
-   ===================================================== */
 .nav-drawer {
   position: fixed;
   top: 0;
@@ -196,7 +179,6 @@ header .nav ul li a.active {
   padding-left: 2.5rem;
 }
 
-/* Dark overlay behind drawer */
 .drawer-overlay {
   display: none;
   position: fixed;
@@ -210,9 +192,6 @@ header .nav ul li a.active {
   display: block;
 }
 
-/* =====================================================
-   HERO / HOME
-   ===================================================== */
 .hero {
   position: relative;
   min-height: calc(100vh - 83px);
@@ -338,9 +317,6 @@ header .nav ul li a.active {
   flex-wrap: wrap;
 }
 
-/* =====================================================
-   BUTTONS
-   ===================================================== */
 .btn-primary {
   display: inline-block;
   background-color: var(--caramel);
@@ -400,9 +376,6 @@ header .nav ul li a.active {
   color: var(--warm-white);
 }
 
-/* =====================================================
-   CONTACT SECTION
-   ===================================================== */
 .section-divider-line {
   padding: 0 60px;
 }
@@ -447,9 +420,6 @@ header .nav ul li a.active {
   color: var(--caramel);
 }
 
-/* =====================================================
-   FOOTER
-   ===================================================== */
 footer {
   background-color: var(--charcoal);
   color: #999;
@@ -462,9 +432,6 @@ footer p {
   letter-spacing: 0.03em;
 }
 
-/* =====================================================
-   ABOUT PAGE
-   ===================================================== */
 .about-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -529,9 +496,6 @@ footer p {
   margin-bottom: 14px;
 }
 
-/* =====================================================
-   MENU PAGE
-   ===================================================== */
 .menu-hero {
   background-color: var(--espresso);
   color: var(--cream);
@@ -818,9 +782,6 @@ footer p {
   white-space: nowrap;
 }
 
-/* =====================================================
-   PAGE BANNER (shared)
-   ===================================================== */
 .page-banner {
   background-color: var(--charcoal);
   color: var(--warm-white);
@@ -862,9 +823,6 @@ footer p {
   font-style: italic;
 }
 
-/* =====================================================
-   ORDER PAGE
-   ===================================================== */
 .order-page {
   display: grid;
   grid-template-columns: 1fr 380px;
@@ -1040,9 +998,6 @@ footer p {
   text-align: center;
 }
 
-/* =====================================================
-   ORDER SIDEBAR
-   ===================================================== */
 .order-sidebar { position: sticky; top: 90px; }
 
 .summary-card {
@@ -1107,9 +1062,6 @@ footer p {
   color: var(--charcoal);
 }
 
-/* =====================================================
-   FORMS
-   ===================================================== */
 .form-group { margin-bottom: 1rem; }
 
 .form-group label {
@@ -1166,9 +1118,6 @@ footer p {
 .place-order-btn:hover    { background: var(--caramel); }
 .place-order-btn:disabled { background: #ccc; cursor: not-allowed; }
 
-/* =====================================================
-   SUCCESS OVERLAY
-   ===================================================== */
 .success-overlay {
   display: none;
   position: fixed;
@@ -1221,9 +1170,6 @@ footer p {
 
 .success-close:hover { background: var(--caramel); }
 
-/* =====================================================
-   TESTIMONIALS
-   ===================================================== */
 .testimonials-section {
   flex: 1;
   background-color: var(--warm-white);
@@ -1302,9 +1248,6 @@ footer p {
 
 .testimonial-card p { color: #555; font-size: 0.92rem; line-height: 1.7; font-style: italic; margin: 0; }
 
-/* =====================================================
-   FEEDBACK
-   ===================================================== */
 .feedback-section {
   flex: 1;
   background-color: var(--warm-white);
@@ -1377,9 +1320,6 @@ footer p {
 
 .submit-btn:hover { background-color: var(--caramel-dk); color: var(--white); }
 
-/* =====================================================
-   ACKNOWLEDGEMENT
-   ===================================================== */
 .ack-section {
   flex: 1;
   background-color: var(--warm-white);
@@ -1443,9 +1383,6 @@ footer p {
 
 .ack-btn:hover { background-color: var(--caramel-dk); }
 
-/* =====================================================
-   RESPONSIVE — TABLET (max 900px)
-   ===================================================== */
 @media (max-width: 900px) {
 
   header {
@@ -1486,13 +1423,8 @@ footer p {
   }
 }
 
-/* =====================================================
-   RESPONSIVE — MOBILE (max 768px)
-   Hamburger appears, top nav hides
-   ===================================================== */
 @media (max-width: 768px) {
 
-  /* Show hamburger, hide inline nav */
   .hamburger {
     display: flex;
   }
@@ -1505,7 +1437,6 @@ footer p {
     padding: 0.75rem 1.25rem;
   }
 
-  /* Hero */
   .hero {
     padding: 40px 24px 80px;
     min-height: 90vh;
@@ -1524,7 +1455,6 @@ footer p {
     max-width: 280px;
   }
 
-  /* About */
   .about-page {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -1548,7 +1478,6 @@ footer p {
 
   .right-panel h2 { font-size: 2rem; }
 
-  /* Menu */
   .menu-grid {
     grid-template-columns: 1fr 1fr;
     padding: 0 1rem 2rem;
@@ -1556,7 +1485,6 @@ footer p {
 
   .card-img { height: 140px; }
 
-  /* Order */
   .order-page {
     grid-template-columns: 1fr;
     margin: 1.5rem auto;
@@ -1570,32 +1498,24 @@ footer p {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Contact */
   .contact-section { padding: 36px 16px; }
   .contact-info { gap: 16px; }
 
-  /* Footer */
   footer {
     text-align: center;
     padding: 16px 20px;
   }
 
-  /* Feedback */
   .feedback-form-wrapper { padding: 28px 20px; }
 
-  /* Ack */
   .ack-card { padding: 36px 20px; }
 
-  /* Testimonials */
   .testimonial-card {
     width: 100%;
     max-width: 340px;
   }
 }
 
-/* =====================================================
-   RESPONSIVE — SMALL MOBILE (max 480px)
-   ===================================================== */
 @media (max-width: 480px) {
 
   .menu-grid { grid-template-columns: 1fr; }
