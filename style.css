@@ -53,6 +53,7 @@ main {
   flex: 1;
 }
 
+/* ── HEADER ── */
 header {
   display: flex;
   justify-content: space-between;
@@ -100,8 +101,9 @@ header .nav ul li a.active {
   color: var(--caramel-md);
 }
 
+/* ── HAMBURGER ── */
 .hamburger {
-  display: none;          
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -134,6 +136,7 @@ header .nav ul li a.active {
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* ── NAV DRAWER ── */
 .nav-drawer {
   position: fixed;
   top: 0;
@@ -192,6 +195,7 @@ header .nav ul li a.active {
   display: block;
 }
 
+/* ── HERO ── */
 .hero {
   position: relative;
   min-height: calc(100vh - 83px);
@@ -376,6 +380,7 @@ header .nav ul li a.active {
   color: var(--warm-white);
 }
 
+/* ── CONTACT / FOOTER ── */
 .section-divider-line {
   padding: 0 60px;
 }
@@ -432,6 +437,7 @@ footer p {
   letter-spacing: 0.03em;
 }
 
+/* ── ABOUT ── */
 .about-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -496,6 +502,7 @@ footer p {
   margin-bottom: 14px;
 }
 
+/* ── MENU ── */
 .menu-hero {
   background-color: var(--espresso);
   color: var(--cream);
@@ -782,6 +789,7 @@ footer p {
   white-space: nowrap;
 }
 
+/* ── PAGE BANNER ── */
 .page-banner {
   background-color: var(--charcoal);
   color: var(--warm-white);
@@ -823,6 +831,7 @@ footer p {
   font-style: italic;
 }
 
+/* ── ORDER ── */
 .order-page {
   display: grid;
   grid-template-columns: 1fr 380px;
@@ -1170,6 +1179,7 @@ footer p {
 
 .success-close:hover { background: var(--caramel); }
 
+/* ── TESTIMONIALS ── */
 .testimonials-section {
   flex: 1;
   background-color: var(--warm-white);
@@ -1248,6 +1258,7 @@ footer p {
 
 .testimonial-card p { color: #555; font-size: 0.92rem; line-height: 1.7; font-style: italic; margin: 0; }
 
+/* ── FEEDBACK ── */
 .feedback-section {
   flex: 1;
   background-color: var(--warm-white);
@@ -1320,14 +1331,14 @@ footer p {
 
 .submit-btn:hover { background-color: var(--caramel-dk); color: var(--white); }
 
+/* ── ACKNOWLEDGEMENT ── */
 .ack-section {
   flex: 1;
   background-color: var(--warm-white);
-  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 .ack-card {
@@ -1383,20 +1394,11 @@ footer p {
 
 .ack-btn:hover { background-color: var(--caramel-dk); }
 
+/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-
-  header {
-    padding: 0.55rem 1.5rem;
-  }
-
-  header .logo img {
-    height: 56px;
-  }
-
-  header .nav ul li a {
-    padding: 0.4rem 0.65rem;
-    font-size: 0.7rem;
-  }
+  header { padding: 0.55rem 1.5rem; }
+  header .logo img { height: 56px; }
+  header .nav ul li a { padding: 0.4rem 0.65rem; font-size: 0.7rem; }
 
   .hero {
     padding: 60px 40px 80px;
@@ -1404,16 +1406,9 @@ footer p {
     align-items: flex-end;
   }
 
-  .about-page {
-    min-height: auto;
-  }
-
-  .right-panel {
-    padding: 40px 30px;
-  }
-
+  .about-page { min-height: auto; }
+  .right-panel { padding: 40px 30px; }
   .contact-section { padding: 40px 20px; }
-
   footer { padding: 16px 30px; }
 
   .order-page {
@@ -1424,18 +1419,11 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  /* Show hamburger, hide desktop nav */
+  .hamburger { display: flex !important; }
+  header .nav { display: none !important; }
 
-  .hamburger {
-    display: flex;
-  }
-
-  header .nav {
-    display: none;
-  }
-
-  header {
-    padding: 0.75rem 1.25rem;
-  }
+  header { padding: 0.75rem 1.25rem; }
 
   .hero {
     padding: 40px 24px 80px;
@@ -1443,10 +1431,7 @@ footer p {
     align-items: flex-end;
   }
 
-  .hero-actions {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
+  .hero-actions { flex-direction: column; gap: 0.8rem; }
 
   .btn-primary,
   .btn-ghost {
@@ -1455,10 +1440,7 @@ footer p {
     max-width: 280px;
   }
 
-  .about-page {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
+  .about-page { grid-template-columns: 1fr; min-height: auto; }
 
   .left-panel {
     height: 50vw;
@@ -1466,23 +1448,12 @@ footer p {
     max-height: 380px;
   }
 
-  .left-panel img {
-    height: 100%;
-    min-height: 260px;
-  }
+  .left-panel img { height: 100%; min-height: 260px; }
 
-  .right-panel {
-    padding: 40px 24px;
-    min-height: unset;
-  }
-
+  .right-panel { padding: 40px 24px; min-height: unset; }
   .right-panel h2 { font-size: 2rem; }
 
-  .menu-grid {
-    grid-template-columns: 1fr 1fr;
-    padding: 0 1rem 2rem;
-  }
-
+  .menu-grid { grid-template-columns: 1fr 1fr; padding: 0 1rem 2rem; }
   .card-img { height: 140px; }
 
   .order-page {
@@ -1493,31 +1464,21 @@ footer p {
   }
 
   .order-sidebar { position: static; }
-
-  .item-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+  .item-grid { grid-template-columns: 1fr 1fr; }
 
   .contact-section { padding: 36px 16px; }
   .contact-info { gap: 16px; }
 
-  footer {
-    text-align: center;
-    padding: 16px 20px;
-  }
+  footer { text-align: center; padding: 16px 20px; }
 
   .feedback-form-wrapper { padding: 28px 20px; }
 
   .ack-card { padding: 36px 20px; }
 
-  .testimonial-card {
-    width: 100%;
-    max-width: 340px;
-  }
+  .testimonial-card { width: 100%; max-width: 340px; }
 }
 
 @media (max-width: 480px) {
-
   .menu-grid { grid-template-columns: 1fr; }
   .item-grid { grid-template-columns: 1fr; }
 
@@ -1525,7 +1486,6 @@ footer p {
   .hero-title { font-size: 2rem; }
 
   .section-divider-line { padding: 0 16px; }
-
   .contact-item { font-size: 0.82rem; }
 
   .specials-banner {
